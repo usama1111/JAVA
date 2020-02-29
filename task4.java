@@ -1,17 +1,24 @@
 
-public class calculate{
-
-
-     public static void main(String []args)
+import java.util.Scanner;
+class task4{
+public static void main(String args[])
 {
-         
-         float price=500.0f;
-     
-    
-         
-         
-        System.out.printf("price reduced by 20% is %f",price*0.020);
-      
-  System.out.printf("new amount will be %f",price-(price*0.020));
-     }
+
+int number;
+int ans;
+int count;
+Scanner s1 = new Scanner(System.in);
+System.out.println("enter a number");
+number=s1.nextInt();
+
+do{
+ans=number*number*number;
+System.out.println("the cube of" + number + "is"+ans);
+
+number--;
 }
+while(number != 0);
+}
+
+}
+
