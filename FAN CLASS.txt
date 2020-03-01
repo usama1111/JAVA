@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class BMI{
+String model;
+String colour;
+String size;
+
+void on(){
+System.out.println(model + "fan is on");
+}
+void size(){
+System.out.println("the size of fan is" + size );
+}
+void colour(){
+System.out.println("colour of " + model + " is " + colour);
+
+}
+
+public static void main(String[] args)
+{
+
+BMI obj = new BMI();
+
+Scanner s1= new Scanner(System.in);
+
+obj.model = "pakfan";
+obj.colour= "white";
+obj.size=  "small";
+
+obj.colour();
+
+obj.size();
+
+
+
+
+
+
+}
+}
