@@ -1,37 +1,49 @@
+import java.io.*; 
+import java.util.ArrayList; 
+  
+class ArrayListDemo { 
+public static void main(String[] args) 
+    { 
+  
+         
+        ArrayList<Double> arrlist = new ArrayList<Double>(10); 
+  
+        arrlist.add(0.215); 
+        arrlist.add(0.320); 
+        arrlist.add(0.25); 
+       
+        for (Double number : arrlist) { 
+            System.out.println("Number = " + number); 
+        } 
+        
+arrlist.add(0,0.4);
+arrlist.size();
 
-import java.util.Scanner;
-class task5{
-public static void main(String args[])
-{
-int number1;
-int number2;
-int number3;
+System.out.println("array size is " +arrlist.size());
+        for (Double number : arrlist) { 
+            System.out.println("Number = " + number); 
+        }
+ 
+ arrlist.remove(0);
+ System.out.println("after removing");
+        for (Double number : arrlist) { 
+            System.out.println("Number = " + number); 
+        }
+ arrlist.remove(arrlist.size() - 1);
+ System.out.println("Removing last object");
+  for (Double number : arrlist) { 
+            System.out.println("Number = " + number); 
+        }
+ }
 
+    
+    
+        
+         
+      
 
-Scanner s1 = new Scanner(System.in);
-System.out.println("enter a number 1");
-number1=s1.nextInt();
-
-System.out.println("enter a number 2");
-number2=s1.nextInt();
-
-System.out.println("enter a number 3");
-number3=s1.nextInt();
-
-if((number1>number2)&&(number1>number3))
-{
-System.out.println("number 1 is greatest");
-}
-if((number2>number1)&&(number2>number3))
-{
-System.out.println("number 2 is greatest");
-}
-if((number3>number2)&&(number3>number1))
-{
-System.out.println("number 3 is greatest");
-}
-}
-
-
-
-}
+      
+    
+    } 
+    
+    

@@ -1,24 +1,51 @@
-import java.util.Scanner;
-import java.util.Random;
-public class Main{public static void main(String[] args) {  
-         int comp_dice;  
-      int comp_user;
-        int compadd = 0;
-        int useradd = 0; 
-       int counterofcomputer=0;   
-     int counterofuser =0; 
-       for (int i = 1 ; i<=10 ; i++){      
-      comp_dise = (int) (Math.random()*5+ 1);  
-          compadd +=comp_dice;            
-com_user = (int) (Math.random()*5+ 1);       
-     useradd +=comp_user;            if(comp_user == comp_dice)         
-   {                System.out.println("Tie");              
-  break;            }     
-       else if(comp_user > comp_dice)            
-{                System.out.println("User wins");     
-           counterofuser = counterofuser + 1;            }            else
-            {                System.out.println("Computer wins");                counterofcomputer = counterofcomputer +1;            }     
-   }        System.out.println("Total rank of computer:  "+comadd);        System.out.println("Total rank of user:  "+useradd);       
- System.out.println("\t\tComputer wins "+(counterofcomputer)+" Times");        System.out.println("\t\tUser wins "+(counterofuser)+" Times");        
-if(counterofcomputer > counterofuser)        {            System.out.println("Computer Wins Finally");        }       
- else        {            System.out.println("User Wins Finally");        }}}
+import java.util.ArrayList;
+class Course{
+private String Name;
+ArrayList<String> list = new <String> ArrayList();
+Course(String Name){
+    this.Name=Name;
+}    
+public void addStudent(String student){
+        list.add(student);
+    }
+
+public void dropStudent(String student){
+        System.out.println(list.remove(student)?"Succesfully drop the student":"Enter the correct name");
+    }
+
+ public ArrayList<String> getList(){
+        return list;
+    }
+public String getName()
+{
+    return Name;
+}
+}
+public class Task4{
+    public static void main(String[] args){
+    Course[] p=new Course[2];
+    p[0] = new Course("Computer"); 
+    p[1] = new Course("English");
+    Course[] q=new Course[2];
+    q[0] = new Course("Maths");
+    q[1] = new Course("OC");
+    for(int i=0;i<p.length;i++){
+        p[i].addStudent(i+ "Muhammad Asim");
+        p[i].dropStudent(i+"Muhammad Asim");
+        p[i].addStudent(i+"Muhammad Sami");
+        p[i].dropStudent(i+"Muhammad Sami");
+        p[i].addStudent(i+"Asad");
+        System.out.println("No of student in "+p[i].getName()+" is: "+p[i].getList());}
+     for(int i=0;i<q.length;i++){   
+        q[i].addStudent("Muhammad Nazim");
+        q[i].dropStudent("Muhammad Nazim");
+        q[i].addStudent("Muhammad Asad");
+        q[i].addStudent("Muhammad Sami");
+        q[i].addStudent("Muhammad Nazim");
+        q[i].dropStudent("Muhammad Sami");
+        System.out.println("No of student in "+q[i].getName()+" is: "+q[i].getList());}
+   
+    
+    
+}
+}  
