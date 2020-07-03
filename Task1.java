@@ -1,9 +1,60 @@
-public class Main{public static void main(String[] args) {    
-StringBuilder NumberPlate = new StringBuilder();  
-  for (int a = 0; a < 3; a++)
+class Manager{
+	
+	public ImeiNumber ImeiNumber;
+	
+	public double imeiNumber;
+	
+	public Manager(){
 
- {        char ch = (char) (Math.random() * 26 + 'A');  
-      NumberPlate.append(ch);    } 
-   for (int a = 0; a < 3; a++) {        char digits = (char) (Math.random() * 10 + '0');        
-NumberPlate.append(digits);    }    
-System.out.println("Random vehicle plate number is : " + NumberPlate);}}
+		ImeiNumber = new ImeiNumber(this);
+
+	};
+   
+
+
+
+	
+}
+
+
+class ImeiNumber{
+
+	private Manager manager;
+	
+
+	public ImeiNumber(Manager manager){
+
+		this.manager = manager;
+	}
+   
+public  String toString(double imeiNumber)
+{
+
+return String.format(" %s %.2f" ,"Imei Number" ,imeiNumber);
+}	
+	
+}
+
+class main{
+
+
+	public static void main(String args[]){
+
+		Manager m = new Manager();
+		ImeiNumber p = new ImeiNumber(m);
+
+
+
+		System.out.println(p.toString(222.00));
+		
+
+	}
+}
+
+
+
+
+
+
+
+
